@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camtasia Studio Premium - Elite Screen Recording & Video Suite</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(140deg, #f0fdf4 0%, #f1f5f9 50%, #f0fdfa 100%);
+        }
+        .camtasia-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .camtasia-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(22, 163, 74, 0.08);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+        .camtasia-text-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #16a34a 60%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .camtasia-btn {
+            background: linear-gradient(135deg, #16a34a 0%, #10b981 50%, #059669 100%);
+            background-size: 200% auto;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .camtasia-btn:hover {
+            background-position: right center;
+            box-shadow: 0 20px 40px rgba(22, 163, 74, 0.35);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-slate-700 min-h-screen flex flex-col justify-between overflow-x-hidden antialiased">
+
+    <!-- Camtasia Tech Green Soft Ambient Glowing Orbs -->
+    <div class="absolute top-[-10%] right-[-15%] w-[350px] md:w-[850px] h-[350px] md:h-[850px] bg-gradient-to-br from-green-200/30 to-emerald-200/20 rounded-full blur-[100px] md:blur-[160px] pointer-events-none z-0"></div>
+    <div class="absolute top-[25%] left-[-15%] w-[400px] md:w-[750px] h-[400px] md:h-[750px] bg-teal-100/30 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0"></div>
+    <div class="absolute bottom-[5%] right-[5%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-green-100/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- Camtasia Brand Navbar -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
+        <div class="flex items-center space-x-3 group cursor-pointer">
+            <!-- Camtasia Style Logo Box -->
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-green-700 via-green-600 to-emerald-500 flex items-center justify-center font-black text-white text-xl shadow-lg transition-transform group-hover:scale-105">Cm</div>
+            <span class="text-slate-900 font-extrabold text-xl tracking-tight">Camtasia<span class="text-green-600 font-bold text-xs ml-1.5 px-2.5 py-0.5 rounded-full bg-green-50 border border-green-100 shadow-sm">STUDIO UNLOCKED</span></span>
+        </div>
+        <div class="text-xs font-bold text-green-700 flex items-center space-x-2 bg-green-50/80 px-3.5 py-2 rounded-full border border-green-100 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            <span>Secure Download Node Verified</span>
+        </div>
+    </header>
+
+    <!-- Main Hero Area -->
+    <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col items-center text-center relative z-10 my-auto">
+        
+        <!-- Live Traffic Metric Badge -->
+        <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-white/90 border border-slate-200 text-xs font-bold text-slate-800 mb-8 shadow-sm">
+            <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            <span>Active Server: <span id="live-counter" class="text-green-600 font-extrabold">14,890</span> fully activated copies deployed successfully today</span>
+        </div>
+
+        <!-- Industry Specific Heading -->
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-6 max-w-5xl leading-[1.1] text-slate-900">
+            Smart Screen Capture. <br>
+            <span class="camtasia-text-gradient">Camtasia Pro for Free.</span>
+        </h1>
+
+        <!-- High-Converting Subtitle -->
+        <p class="text-slate-600 text-base sm:text-lg md:text-xl max-w-3xl mb-12 font-normal leading-relaxed px-2">
+            The ultimate software for high-end tutorials, e-learning courses, and professional screen recordings. Unlock full canvas editing, pre-built behaviors, smart zoom matrices, and zero export watermarks.
+        </p>
+
+        <!-- CTA Action Chamber -->
+        <div class="w-full max-w-md p-2 rounded-2xl bg-white/80 border border-slate-200 shadow-2xl mb-24">
+            <!-- Points Directly to download.html -->
+            <a href="download.html" class="w-full py-4 px-8 rounded-xl camtasia-btn text-white font-bold text-lg flex items-center justify-center space-x-3 group">
+                <span>Access Free Download</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Camtasia Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full text-left mb-24">
+            
+            <div class="p-8 rounded-3xl camtasia-card shadow-lg shadow-green-900/5">
+                <div class="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center mb-6 text-green-600 border border-green-100 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Ultra HD Screen Capture</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Record crisp, high-fidelity desktop viewports, system audio layers, and clear webcam streams simultaneously without latency limitations.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl camtasia-card shadow-lg shadow-green-900/5">
+                <div class="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center mb-6 text-teal-600 border border-teal-100 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Smart Cursor Animations</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Automatically scale cursor pathways, apply high-end highlight smoothing vectors, and emphasize micro-clicks intelligently for tutorials.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl camtasia-card shadow-lg shadow-green-900/5 sm:col-span-2 md:col-span-1">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6 text-emerald-600 border border-emerald-100 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Pre-Built Asset Libraries</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Access massive cloud layout layers containing professional callouts, kinetic typography titles, lower thirds, and intro animations.</p>
+            </div>
+
+        </div>
+
+        <!-- Section: High-Trust E-Learning Creator Reviews -->
+        <div class="w-full max-w-4xl mx-auto mb-24">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-10 tracking-tight">Trusted by Educational Producers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="p-6 rounded-2xl bg-white/75 border border-slate-200/60 shadow-sm">
+                    <p class="text-slate-600 text-sm italic mb-4">"The high-resolution cursor smoothing algorithms operate flawlessly. Rendering production-ready master tutorial files without watermark delays saved immense development hours."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover">
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-900">Dr. Elena Rostova</h5>
+                            <span class="text-xs text-green-600 font-semibold">Senior E-Learning Architect</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/75 border border-slate-200/60 shadow-sm">
+                    <p class="text-slate-600 text-sm italic mb-4">"Complete structural system stability. Zero license validation popups, providing fluid multi-track canvas editing environments out of the box."</p>
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="w-9 h-9 rounded-full object-cover">
+                        <div>
+                            <h5 class="text-sm font-bold text-slate-900">Jonathan Briggs</h5>
+                            <span class="text-xs text-green-600 font-semibold">Tech Review Producer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Luxury Footer -->
+    <footer class="w-full border-t border-slate-200 bg-white/50 backdrop-blur-lg py-6 text-center text-xs text-slate-400 font-medium relative z-10">
+        <p>© 2026 Core Tech Networks. Distributed Distribution Channels. Camtasia is a registered asset of TechSmith Corporation.</p>
+    </footer>
+
+    <!-- Counter Dynamics Script -->
+    <script>
+        setInterval(() => {
+            const counter = document.getElementById('live-counter');
+            let num = parseInt(counter.innerText.replace(/,/g, ''));
+            num += Math.floor(Math.random() * 3) + 1;
+            counter.innerText = num.toLocaleString();
+        }, 3100);
+    </script>
+
+</body>
+</html>
