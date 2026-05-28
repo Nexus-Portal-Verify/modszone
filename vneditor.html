@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN Video Editor Pro - Seamless Mobile & Desktop Creator Toolkit</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Plus Jakarta Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(140deg, #fffbeb 0%, #f1f5f9 50%, #fef3c7 100%);
+        }
+        .vn-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .vn-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(234, 179, 8, 0.06);
+            border-color: rgba(234, 179, 8, 0.4);
+        }
+        .vn-text-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #ca8a04 60%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .vn-btn {
+            background: linear-gradient(135deg, #1e293b 0%, #475569 50%, #0f172a 100%);
+            background-size: 200% auto;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .vn-btn:hover {
+            background-position: right center;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="text-slate-700 min-h-screen flex flex-col justify-between overflow-x-hidden antialiased">
+
+    <!-- VN Amber Soft Orbs -->
+    <div class="absolute top-[-10%] right-[-15%] w-[350px] md:w-[850px] h-[350px] md:h-[850px] bg-gradient-to-br from-amber-200/20 to-yellow-200/20 rounded-full blur-[100px] md:blur-[160px] pointer-events-none z-0"></div>
+    <div class="absolute top-[25%] left-[-15%] w-[400px] md:w-[750px] h-[400px] md:h-[750px] bg-slate-200/30 rounded-full blur-[100px] md:blur-[140px] pointer-events-none z-0"></div>
+
+    <!-- VN Brand Navbar -->
+    <header class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
+        <div class="flex items-center space-x-3 group cursor-pointer">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-slate-950 via-slate-900 to-black flex items-center justify-center font-black text-amber-400 text-xl shadow-lg transition-transform group-hover:scale-105">VN</div>
+            <span class="text-slate-900 font-extrabold text-xl tracking-tight">VN Editor<span class="text-amber-600 font-bold text-xs ml-1.5 px-2.5 py-0.5 rounded-full bg-amber-50 border border-amber-200 shadow-sm">PRO UNLOCKED</span></span>
+        </div>
+        <div class="text-xs font-bold text-slate-800 flex items-center space-x-2 bg-white/80 px-3.5 py-2 rounded-full border border-slate-200 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span>Mobile & PC Bridge Active</span>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col items-center text-center relative z-10 my-auto">
+        
+        <div class="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-white/90 border border-slate-200 text-xs font-bold text-slate-800 mb-8 shadow-sm">
+            <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span>Network: <span id="live-counter" class="text-amber-600 font-extrabold">22,190</span> verified configurations delivered today</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight mb-6 max-w-5xl leading-[1.1] text-slate-900">
+            Create on the Go. <br>
+            <span class="vn-text-gradient">VN Pro Fully Unlocked.</span>
+        </h1>
+
+        <p class="text-slate-600 text-base sm:text-lg md:text-xl max-w-3xl mb-12 font-normal leading-relaxed px-2">
+            Experience premium multi-track editing across Desktop and Mobile form factors. Gain absolute access to VIP cinematic filters, smart speed ramping loops, and advanced curve adjustments completely ad-free.
+        </p>
+
+        <div class="w-full max-w-md p-2 rounded-2xl bg-white/80 border border-slate-200 shadow-2xl mb-24">
+            <a href="download.html" class="w-full py-4 px-8 rounded-xl vn-btn text-white font-bold text-lg flex items-center justify-center space-x-3 group">
+                <span>Access Free Download</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full text-left mb-24">
+            <div class="p-8 rounded-3xl vn-card shadow-lg shadow-slate-200/40">
+                <div class="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center mb-6 text-amber-600 border border-amber-100 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Interactive Multi-Track</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Layer background scores, transition matrices, sub-titles, and sticker layouts seamlessly without track blocking limitations.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl vn-card shadow-lg shadow-slate-200/40">
+                <div class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 text-slate-800 border border-slate-200 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Dynamic Speed Curve</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Deploy custom curve parameters to command speed shifts flawlessly. Perfect for dramatic TikTok Reels and modern Shorts loops.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl vn-card shadow-lg shadow-slate-200/40 sm:col-span-2 md:col-span-1">
+                <div class="w-12 h-12 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6 text-yellow-600 border border-yellow-100 shadow-inner">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                </div>
+                <h3 class="text-slate-900 font-bold text-lg mb-2">Zero Watermark Overlay</h3>
+                <p class="text-slate-600 text-sm leading-relaxed font-light">Completely strip branding artifacts. Export your pristine creative outputs in pure 4K at solid 60FPS formats.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-slate-200 bg-white/50 backdrop-blur-lg py-6 text-center text-xs text-slate-400 font-medium relative z-10">
+        <p>© 2026 Vision Native Clusters. Unlocked Global Releases. VN is a registered asset of Vision Innovation Technology.</p>
+    </footer>
+
+    <script>
+        setInterval(() => {
+            const counter = document.getElementById('live-counter');
+            let num = parseInt(counter.innerText.replace(/,/g, ''));
+            num += Math.floor(Math.random() * 4) + 1;
+            counter.innerText = num.toLocaleString();
+        }, 3200);
+    </script>
+</body>
+</html>
