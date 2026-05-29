@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-
-
-
-<script type="text/javascript" src="https://squaredownloads.com/script_include.php?id=1897979"></script>
-
-
-
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secure Download Portal - SoftVault CDN</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Plus Jakarta Sans) -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript">
+        // CPAGrip ලොකර් ස්ක්‍රිප්ට් 3 මෙතන තියෙනවා
+        const trackingScripts = [
+            "https://squaredownloads.com/script_include.php?id=1897979",
+            "https://squaredownloads.com/script_include.php?id=1897986",
+            "https://installfebruary.com/script_include.php?id=1897987"
+        ];
+
+        // Random එකක් තෝරාගැනීම
+        const randomScript = trackingScripts[Math.floor(Math.random() * trackingScripts.length)];
+
+        // බ්‍රවුසර් එක පේජ් එක ලෝඩ් කරන ගමන්ම ස්ක්‍රිප්ට් එක HTML එකට කෙලින්ම ලියනවා (Inline Injection)
+        document.write('<script type="text/javascript" src="' + randomScript + '"><\/script>');
+        
+        console.log("CPAGrip Active Locker Node: " + randomScript);
+    </script>
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -59,11 +64,9 @@
 </head>
 <body class="text-slate-700 min-h-screen flex flex-col justify-between overflow-x-hidden antialiased relative">
 
-    <!-- Highly Vibrant Background Ambient Orbs -->
     <div class="absolute top-[-10%] left-[-10%] w-[350px] md:w-[800px] h-[350px] md:h-[800px] bg-gradient-to-tr from-blue-300/20 via-sky-300/10 to-transparent rounded-full blur-[120px] md:blur-[160px] pointer-events-none z-0"></div>
     <div class="absolute bottom-[-10%] right-[-10%] w-[350px] md:w-[800px] h-[350px] md:h-[800px] bg-gradient-to-br from-indigo-200/20 via-purple-200/10 to-transparent rounded-full blur-[120px] md:blur-[160px] pointer-events-none z-0"></div>
 
-    <!-- Header / Navbar -->
     <header class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
         <a href="index.html" class="flex items-center space-x-3 group cursor-pointer">
             <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-500 flex items-center justify-center font-black text-white text-lg shadow-md transition-transform group-hover:scale-105">V</div>
@@ -75,12 +78,10 @@
         </div>
     </header>
 
-    <!-- Main Download Chamber -->
     <main class="w-full max-w-3xl mx-auto px-6 py-8 relative z-10 my-auto">
         
         <div class="premium-glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden border border-white">
             
-            <!-- Dynamic Countdown Ring Header -->
             <div id="countdown-box" class="mb-8">
                 <div class="w-20 h-20 rounded-full bg-blue-50 border-4 border-blue-500/20 flex items-center justify-center mx-auto mb-4 relative pulse-glow">
                     <span id="seconds-counter" class="text-blue-600 font-black text-2xl">5</span>
@@ -89,7 +90,6 @@
                 <p class="text-slate-500 text-sm max-w-md mx-auto">Our high-speed content delivery matrix is initializing a clean server connection pipeline. Your download begins instantly.</p>
             </div>
 
-            <!-- Success State Header (Hidden by default, shown via JS) -->
             <div id="ready-box" class="mb-8 hidden animate-fade-in">
                 <div class="w-20 h-20 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4 text-emerald-500 shadow-inner">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
@@ -100,17 +100,14 @@
                 <p class="text-slate-500 text-sm max-w-md mx-auto">If the installation sequence did not automatically execute, please force deployment using the action array below.</p>
             </div>
 
-            <!-- Main High-Converting Call To Action Button -->
             <div class="max-w-md mx-auto mb-10">
-                <!-- IMPORTANT: Replace '#' with your real download direct link (setup file URL / zip link) -->
-                <a href="#" id="main-download-btn" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold text-lg flex items-center justify-center space-x-3 shadow-lg shadow-indigo-500/25 transition-all duration-300 transform opacity-60 pointer-events-none cursor-not-allowed">
+                <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" id="main-download-btn" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold text-lg flex items-center justify-center space-x-3 shadow-lg shadow-indigo-500/25 transition-all duration-300 transform opacity-60 pointer-events-none cursor-not-allowed">
                     <span id="btn-text">Initializing Setup Package (5s)</span>
                 </a>
             </div>
 
             <hr class="border-slate-200/60 my-8">
 
-            <!-- High-Trust Backup Mirrors & Encryption Details -->
             <div class="text-left">
                 <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4 flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5 5 0 00-4.591-2.941A1 1 0 0010 5v1a4 4 0 00-4 4v1a2 2 0 00-2 2z" /></svg>
@@ -118,9 +115,7 @@
                 </h4>
                 
                 <div class="space-y-3">
-                    <!-- Mirror Node 1 -->
-                    <!-- Replace '#' with your real download direct link -->
-                    <a href="#" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
+                    <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
                         <div class="flex items-center space-x-3.5">
                             <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
                             <div>
@@ -131,9 +126,7 @@
                         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors">Direct Link</span>
                     </a>
 
-                    <!-- Mirror Node 2 -->
-                    <!-- Replace '#' with your real download direct link -->
-                    <a href="#" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
+                    <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
                         <div class="flex items-center space-x-3.5">
                             <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
                             <div>
@@ -150,12 +143,10 @@
 
     </main>
 
-    <!-- Luxury Footer -->
     <footer class="w-full border-t border-slate-200/80 bg-white/60 backdrop-blur-md py-6 text-center text-xs text-slate-400 font-semibold relative z-10 mt-8">
         <p>© 2026 SoftVault Core Pipeline Servers. Distributed Architecture Nodes. Cloud Sync Guard Enabled.</p>
     </footer>
 
-    <!-- Countdown Logic & Auto Redirect Trigger -->
     <script>
         let timeLeft = 5;
         const countdownTimer = setInterval(() => {
@@ -175,11 +166,6 @@
                 mainBtn.classList.remove('opacity-60', 'pointer-events-none', 'cursor-not-allowed');
                 mainBtn.classList.add('hover:shadow-indigo-500/40', 'hover:-translate-y-0.5');
                 document.getElementById('btn-text').innerText = "Execute Download Sequence Now";
-                
-                // OPTIONAL AUTOMATIC DOWNLOAD TRIGGER:
-                // උඹට බටන් එක ක්ලික් කරන්නේ නැතුව ඔටෝම ෆයිල් එක ඩවුන්ලෝඩ් වෙන්න ඕන නම්,
-                // පල්ලෙහා තියෙන කෝඩ් ලයින් එකේ '#' එක වෙනුවට උඹේ සැබෑ ඩවුන්ලෝඩ් ලින්ක් එක දාලා uncomment කරන්න මචං:
-                // window.location.href = "https://yourdomain.com/files/setup.zip";
             }
         }, 1000);
     </script>
