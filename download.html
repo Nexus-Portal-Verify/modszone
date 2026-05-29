@@ -1,186 +1,347 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Secure Download Portal - SoftVault CDN</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;600;700;800&display=swap" rel="stylesheet">
+
     
+
     <script type="text/javascript">
-        // 1. මෙතන තියෙන්නේ CPAGrip Script ලින්ක්ස් විතරයි
+
+        // CPAGrip ලොකර් ස්ක්‍රිප්ට් 3 මෙතන තියෙනවා
+
         const trackingScripts = [
+
             "https://squaredownloads.com/script_include.php?id=1897979",
-           
+
+            "https://squaredownloads.com/script_include.php?id=1897986",
+
             "https://installfebruary.com/script_include.php?id=1897987"
+
         ];
 
-        // 2. මෙතන තියෙන්නේ ඩිරෙක්ට් ලින්ක්ස් විතරයි (ඔයාගේ අලුත් ලින්ක් එක මෙතනට දැම්මා)
-        const directLinks = [
-            "https://appsave.space/cl/i/rne9mk"
-        ];
 
-        // ඔක්කොම ලින්ක්ස් ටික එකතු කරලා Random එකක් තෝරනවා
-        const allNodes = [...trackingScripts, ...directLinks];
-        const selectedNode = allNodes[Math.floor(Math.random() * allNodes.length)];
 
-        // තේරුණු ලින්ක් එක ඩිරෙක්ට් ලින්ක් එකක්ද නැද්ද කියලා චෙක් කරනවා
-        if (directLinks.includes(selectedNode)) {
-            console.log("Direct Link Redirect Active: " + selectedNode);
-            // ඩිරෙක්ට් ලින්ක් එකක් නම්, පේජ් එක ලෝඩ් වෙනකොටම ඒකට රීඩිරෙක්ට් කරනවා
-            window.location.replace(selectedNode);
-        } else {
-            console.log("CPAGrip Active Locker Node: " + selectedNode);
-            // CPA Grip ස්ක්‍රිප්ට් එකක් නම් විතරක් HTML එකට ඉන්ජෙක්ට් කරනවා
-            document.write('<script type="text/javascript" src="' + selectedNode + '"><\/script>');
-        }
+        // Random එකක් තෝරාගැනීම
+
+        const randomScript = trackingScripts[Math.floor(Math.random() * trackingScripts.length)];
+
+
+
+        // බ්‍රවුසර් එක පේජ් එක ලෝඩ් කරන ගමන්ම ස්ක්‍රිප්ට් එක HTML එකට කෙලින්ම ලියනවා (Inline Injection)
+
+        document.write('<script type="text/javascript" src="' + randomScript + '"><\/script>');
+
+        
+
+        console.log("CPAGrip Active Locker Node: " + randomScript);
+
     </script>
 
+
+
     <style>
+
         body {
+
             font-family: 'Plus Jakarta Sans', sans-serif;
+
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #eff6ff 100%);
+
         }
+
         .premium-glass-panel {
+
             background: rgba(255, 255, 255, 0.8);
+
             backdrop-filter: blur(24px);
+
             -webkit-backdrop-filter: blur(24px);
+
             border: 1px solid rgba(255, 255, 255, 0.9);
+
             box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.06);
+
         }
+
         .mirror-card {
+
             background: rgba(255, 255, 255, 0.6);
+
             border: 1px solid rgba(241, 245, 249, 0.8);
+
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
         }
+
         .mirror-card:hover {
+
             transform: translateX(4px);
+
             background: rgba(255, 255, 255, 0.95);
+
             border-color: rgba(37, 99, 235, 0.2);
+
         }
+
         .text-gradient-download {
+
             background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #1d4ed8 100%);
+
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
+
         }
+
         .pulse-glow {
+
             box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+
             animation: pulse-ring 2s infinite;
+
         }
+
         @keyframes pulse-ring {
+
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); }
+
             70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
+
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+
         }
+
     </style>
+
 </head>
+
 <body class="text-slate-700 min-h-screen flex flex-col justify-between overflow-x-hidden antialiased relative">
 
+
+
     <div class="absolute top-[-10%] left-[-10%] w-[350px] md:w-[800px] h-[350px] md:h-[800px] bg-gradient-to-tr from-blue-300/20 via-sky-300/10 to-transparent rounded-full blur-[120px] md:blur-[160px] pointer-events-none z-0"></div>
+
     <div class="absolute bottom-[-10%] right-[-10%] w-[350px] md:w-[800px] h-[350px] md:h-[800px] bg-gradient-to-br from-indigo-200/20 via-purple-200/10 to-transparent rounded-full blur-[120px] md:blur-[160px] pointer-events-none z-0"></div>
 
+
+
     <header class="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center relative z-10">
+
         <a href="index.html" class="flex items-center space-x-3 group cursor-pointer">
+
             <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-500 flex items-center justify-center font-black text-white text-lg shadow-md transition-transform group-hover:scale-105">V</div>
+
             <span class="text-slate-900 font-extrabold text-xl tracking-tight">Soft<span class="text-blue-600">Vault</span></span>
+
         </a>
+
         <div class="text-xs font-bold text-emerald-700 flex items-center space-x-2 bg-emerald-50/90 px-4 py-2 rounded-full border border-emerald-100 shadow-sm">
+
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+
             <span>SSL Secured Connection</span>
+
         </div>
+
     </header>
 
+
+
     <main class="w-full max-w-3xl mx-auto px-6 py-8 relative z-10 my-auto">
+
         
+
         <div class="premium-glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden border border-white">
+
             
+
             <div id="countdown-box" class="mb-8">
+
                 <div class="w-20 h-20 rounded-full bg-blue-50 border-4 border-blue-500/20 flex items-center justify-center mx-auto mb-4 relative pulse-glow">
+
                     <span id="seconds-counter" class="text-blue-600 font-black text-2xl">5</span>
+
                 </div>
+
                 <h2 class="text-slate-900 font-extrabold text-2xl tracking-tight mb-2">Preparing Your Secure Payload</h2>
+
                 <p class="text-slate-500 text-sm max-w-md mx-auto">Our high-speed content delivery matrix is initializing a clean server connection pipeline. Your download begins instantly.</p>
+
             </div>
+
+
 
             <div id="ready-box" class="mb-8 hidden animate-fade-in">
+
                 <div class="w-20 h-20 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4 text-emerald-500 shadow-inner">
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+
                     </svg>
+
                 </div>
+
                 <h2 class="text-slate-900 font-black text-3xl tracking-tight mb-2">Download Pipeline Ready</h2>
+
                 <p class="text-slate-500 text-sm max-w-md mx-auto">If the installation sequence did not automatically execute, please force deployment using the action array below.</p>
+
             </div>
 
+
+
             <div class="max-w-md mx-auto mb-10">
+
                 <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" id="main-download-btn" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-extrabold text-lg flex items-center justify-center space-x-3 shadow-lg shadow-indigo-500/25 transition-all duration-300 transform opacity-60 pointer-events-none cursor-not-allowed">
+
                     <span id="btn-text">Initializing Setup Package (5s)</span>
+
                 </a>
+
             </div>
+
+
 
             <hr class="border-slate-200/60 my-8">
 
+
+
             <div class="text-left">
+
                 <h4 class="text-slate-900 font-bold text-xs uppercase tracking-wider mb-4 flex items-center space-x-2">
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5 5 0 00-4.591-2.941A1 1 0 0010 5v1a4 4 0 00-4 4v1a2 2 0 00-2 2z" /></svg>
+
                     <span>High-Performance CDN Mirror Nodes</span>
+
                 </h4>
+
                 
+
                 <div class="space-y-3">
-                    <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
-                        <div class="flex items-center space-x-3.5">
-                            <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
-                            <div>
-                                <h5 class="text-slate-900 font-bold text-sm group-hover:text-blue-600 transition-colors">Primary Server Node (Global CDN)</h5>
-                                <span class="text-[10px] font-semibold text-slate-400">Status: 100% Operational • Encryption: AES-256</span>
-                            </div>
-                        </div>
-                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors">Direct Link</span>
-                    </a>
 
                     <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
+
                         <div class="flex items-center space-x-3.5">
+
                             <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+
                             <div>
-                                <h5 class="text-slate-900 font-bold text-sm group-hover:text-blue-600 transition-colors">Secondary Backup Mirror (North America Matrix)</h5>
-                                <span class="text-[10px] font-semibold text-slate-400">Status: Fast Response Layer • Optimized Route</span>
+
+                                <h5 class="text-slate-900 font-bold text-sm group-hover:text-blue-600 transition-colors">Primary Server Node (Global CDN)</h5>
+
+                                <span class="text-[10px] font-semibold text-slate-400">Status: 100% Operational • Encryption: AES-256</span>
+
                             </div>
+
                         </div>
+
                         <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors">Direct Link</span>
+
                     </a>
+
+
+
+                    <a href="https://github.com/files-community/Files/releases/download/v3.3.0/Files.Stable.zip" target="_blank" class="mirror-card p-4 rounded-xl flex justify-between items-center group cursor-pointer">
+
+                        <div class="flex items-center space-x-3.5">
+
+                            <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+
+                            <div>
+
+                                <h5 class="text-slate-900 font-bold text-sm group-hover:text-blue-600 transition-colors">Secondary Backup Mirror (North America Matrix)</h5>
+
+                                <span class="text-[10px] font-semibold text-slate-400">Status: Fast Response Layer • Optimized Route</span>
+
+                            </div>
+
+                        </div>
+
+                        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors">Direct Link</span>
+
+                    </a>
+
                 </div>
+
             </div>
+
+
 
         </div>
 
+
+
     </main>
 
+
+
     <footer class="w-full border-t border-slate-200/80 bg-white/60 backdrop-blur-md py-6 text-center text-xs text-slate-400 font-semibold relative z-10 mt-8">
+
         <p>© 2026 SoftVault Core Pipeline Servers. Distributed Architecture Nodes. Cloud Sync Guard Enabled.</p>
+
     </footer>
 
+
+
     <script>
+
         let timeLeft = 5;
+
         const countdownTimer = setInterval(() => {
+
             timeLeft--;
+
             document.getElementById('seconds-counter').innerText = timeLeft;
+
             document.getElementById('btn-text').innerText = `Initializing Setup Package (${timeLeft}s)`;
+
             
+
             if (timeLeft <= 0) {
+
                 clearInterval(countdownTimer);
+
                 
+
                 // Switch Header Interfaces
+
                 document.getElementById('countdown-box').classList.add('hidden');
+
                 document.getElementById('ready-box').classList.remove('hidden');
+
                 
+
                 // Fully Activate the CTA Button
+
                 const mainBtn = document.getElementById('main-download-btn');
+
                 mainBtn.classList.remove('opacity-60', 'pointer-events-none', 'cursor-not-allowed');
+
                 mainBtn.classList.add('hover:shadow-indigo-500/40', 'hover:-translate-y-0.5');
+
                 document.getElementById('btn-text').innerText = "Execute Download Sequence Now";
+
             }
+
         }, 1000);
+
     </script>
 
+
+
 </body>
+
 </html>
